@@ -1,4 +1,10 @@
 @import url("reset.css");
+.container {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}
+
 .wrapper {
   width: 100%;
   background-color: #ffffff;
