@@ -1,11 +1,87 @@
 @import url("reset.css");
-.content-navigation {
-  border-color: #3bbfce;
-  color: #2ca2af;
+.wrapper {
+  width: 100%;
+  background-color: #ffffff;
 }
 
-.border {
-  padding: 8px;
-  margin: 8px;
-  border-color: #3bbfce;
+.row {
+  background-color: #ffffff;
+  overflow: hidden;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-6,
+.col-12 {
+  background-color: #819CBC;
+  color: #ffffff;
+  height: 55px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 15px;
+  box-sizing: border-box;
+}
+
+.col-1 {
+  width: 6.5%;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 2%;
+}
+.col-1:last-child {
+  margin-right: 0;
+}
+
+.col-2 {
+  width: 15%;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 2%;
+}
+.col-2:last-child {
+  margin-right: 0;
+}
+
+.col-3 {
+  width: 23.5%;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 2%;
+}
+.col-3:last-child {
+  margin-right: 0;
+}
+
+.col-4 {
+  width: 32%;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 2%;
+}
+.col-4:last-child {
+  margin-right: 0;
+}
+
+.col-6 {
+  width: 49%;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 2%;
+}
+.col-6:last-child {
+  margin-right: 0;
+}
+
+.col-12 {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  margin-right: 2%;
+}
+.col-12:last-child {
+  margin-right: 0;
 }
