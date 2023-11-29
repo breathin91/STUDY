@@ -1,8 +1,36 @@
 @import url("reset.css");
+header {
+  display: block;
+  width: 100%;
+  border: 1px solid blue;
+}
+header nav {
+  display: block;
+  width: 70%;
+  border: 1px solid green;
+  margin: 0 auto;
+  text-align: left;
+}
+header nav ul {
+  border: 1px solid purple;
+}
+header nav ul li {
+  float: left;
+  padding: 0 5%;
+}
+
+main {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid red;
+  clear: both;
+}
 
 .container {
   display: block;
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
 }
 

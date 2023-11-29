@@ -5,7 +5,7 @@ $total-columns: 12
 $margin: 2%
 $one-column: (100% - ($margin * ($total-columns - 1))) / $total-columns
 
-= grid($column-num)
+@mixin grid($column-num)
   width: ($one-column*$column-num) + (($column-num) - 1) * $margin
   float: left
   box-sizing: border-box
@@ -14,9 +14,33 @@ $one-column: (100% - ($margin * ($total-columns - 1))) / $total-columns
   &:last-child
     margin-right: 0
 
+header 
+  display: block
+  width: 100%
+  border: 1px solid blue
+  nav
+    display: block
+    width: 70%
+    border: 1px solid green
+    margin: 0 auto
+    text-align: left
+    ul
+      border: 1px solid purple
+      li
+        float: left
+        padding: 0 5%
+        
+main
+  display: block
+  width: 100%
+  text-align: center
+  margin: 0 auto
+  border: 1px solid red
+  clear: both
+
 .container
   display: block
-  width: 70%
+  width: 100%
   margin: 0 auto
 
 .wrapper
@@ -39,19 +63,19 @@ $one-column: (100% - ($margin * ($total-columns - 1))) / $total-columns
   box-sizing: border-box
 
 .col-1
-  + grid(1)
+  @include grid (1)
 
 .col-2
-  + grid(2)
+  @include grid (2)
 
 .col-3
-  + grid(3)
+  @include grid (3)
 
 .col-4
-  + grid(4)
+  @include grid (4)
 
 .col-6
-  + grid(6)
+  @include grid (6)
 
 .col-12
-  + grid(12)
+  @include grid (12)

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Grid Testing | WIP</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    .col {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      align-items: center;
+      background: #5299EB;
+      border-radius: 4px;
+      font-size: 14px;
+      color: #fff;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .fluid-wrapper {
+      width: 100vw;
+      height: auto;
+    }
+
+    .wrapper {
+      width: calc(100vw - 60px);
+      height: auto;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .row {
+      display: grid;
+      grid-gap: 20px;
+      grid-auto-rows: 60px;
+      margin: 20px 0;
+    }
+
+    .span-12 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .span-6 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .span-4 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .span-3 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .span-2 {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+    .span-1 {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .span-1-11 {
+      grid-template-columns: 1fr 11fr;
+    }
+
+    .span-2-10 {
+      grid-template-columns: 2fr 10fr;
+    }
+
+    .span-3-9 {
+      grid-template-columns: 3fr 9fr;
+    }
+
+    .span-4-8 {
+      grid-template-columns: 4fr 8fr;
+    }
+
+    .span-5-7 {
+      grid-template-columns: 5fr 7fr;
+    }
+
+    .span-6-6 {
+      grid-template-columns: 6fr 6fr;
+    }
+
+    .span-7-5 {
+      grid-template-columns: 7fr 5fr;
+    }
+
+    .span-8-4 {
+      grid-template-columns: 8fr 4fr;
+    }
+
+    .span-9-3 {
+      grid-template-columns: 9fr 3fr;
+    }
+
+    .span-10-2 {
+      grid-template-columns: 10fr 2fr;
+    }
+
+    .span-11-1 {
+      grid-template-columns: 11fr 1fr;
+    }
+
+    @media screen and (max-width: 480px) {
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      .xs-span-6 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (min-width: 481px) and (max-width: 567px) {
+      .s-span-12 {
+        grid-template-columns: 1fr;
+      }
+
+      .s-span-6 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .s-span-4 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .s-span-3 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .s-span-2 {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    @media screen and (min-width: 568px) and (max-width: 767px) {
+      .m-span-6 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .m-span-4 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .m-span-2 {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 980px) {
+      .t-span-4 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .t-span-2 {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+  </style>
+  <script>
+    window.console = window.console || function(t) {};
+  </script>
+  <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+</head>
+
+<body translate="no">
+  <div class="wrapper">
+    <div class="row span-12">
+      <div class="col">span-12</div>
+    </div>
+    <div class="row span-6 s-span-12">
+      <div class="col">span-6</div>
+      <div class="col">span-6</div>
+    </div>
+    <div class="row span-4 s-span-12">
+      <div class="col">span-4</div>
+      <div class="col">span-4</div>
+      <div class="col">span-4</div>
+    </div>
+    <div class="row span-3 m-span-6 s-span-6">
+      <div class="col">span-3</div>
+      <div class="col">span-3</div>
+      <div class="col">span-3</div>
+      <div class="col">span-3</div>
+    </div>
+    <div class="row span-2 m-span-4 s-span-4">
+      <div class="col">span-2</div>
+      <div class="col">span-2</div>
+      <div class="col">span-2</div>
+      <div class="col">span-2</div>
+      <div class="col">span-2</div>
+      <div class="col">span-2</div>
+    </div>
+    <div class="row span-1 t-span-2 m-span-2 s-span-3">
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+      <div class="col">span-1</div>
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="row span-1-11">
+      <div class="col">span-1</div>
+      <div class="col">span-11</div>
+    </div>
+    <div class="row span-2-10">
+      <div class="col">span-2</div>
+      <div class="col">span-10</div>
+    </div>
+    <div class="row span-3-9">
+      <div class="col">span-3</div>
+      <div class="col">span-9</div>
+    </div>
+    <div class="row span-4-8">
+      <div class="col">span-4</div>
+      <div class="col">span-8</div>
+    </div>
+    <div class="row span-5-7">
+      <div class="col">span-5</div>
+      <div class="col">span-7</div>
+    </div>
+    <div class="row span-6-6">
+      <div class="col">span-6</div>
+      <div class="col">span-6</div>
+    </div>
+    <div class="row span-7-5">
+      <div class="col">span-7</div>
+      <div class="col">span-5</div>
+    </div>
+    <div class="row span-8-4">
+      <div class="col">span-8</div>
+      <div class="col">span-4</div>
+    </div>
+    <div class="row span-9-3">
+      <div class="col">span-9</div>
+      <div class="col">span-3</div>
+    </div>
+    <div class="row span-10-2">
+      <div class="col">span-10</div>
+      <div class="col">span-2</div>
+    </div>
+    <div class="row span-11-1">
+      <div class="col">span-11</div>
+      <div class="col">span-2</div>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+</body>
+
+</html>
