@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import {useContainerQuery} from 'react-container-query';
 
 const query = {

@@ -57,7 +57,6 @@ main {
 }
 
 .col-1 {
-  width: 6.5%;
   float: left;
   box-sizing: border-box;
   margin-right: 2%;
@@ -67,7 +66,6 @@ main {
 }
 
 .col-2 {
-  width: 15%;
   float: left;
   box-sizing: border-box;
   margin-right: 2%;
@@ -77,7 +75,6 @@ main {
 }
 
 .col-3 {
-  width: 23.5%;
   float: left;
   box-sizing: border-box;
   margin-right: 2%;
@@ -87,7 +84,6 @@ main {
 }
 
 .col-4 {
-  width: 32%;
   float: left;
   box-sizing: border-box;
   margin-right: 2%;
@@ -97,7 +93,6 @@ main {
 }
 
 .col-6 {
-  width: 49%;
   float: left;
   box-sizing: border-box;
   margin-right: 2%;
@@ -107,7 +102,6 @@ main {
 }
 
 .col-12 {
-  width: 100%;
   float: left;
   box-sizing: border-box;
   margin-right: 2%;

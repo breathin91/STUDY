@@ -3,10 +3,10 @@
 $grid-width: 100%
 $total-columns: 12
 $margin: 2%
-$one-column: (100% - ($margin * ($total-columns - 1))) / $total-columns
+// $one-column: (100% - ($margin * ($total-columns - 1))) / $total-columns
 
 @mixin grid($column-num)
-  width: ($one-column*$column-num) + (($column-num) - 1) * $margin
+  // width: ($one-column*$column-num) + (($column-num) - 1) * $margin
   float: left
   box-sizing: border-box
   margin-right: $margin
